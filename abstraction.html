@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Abstraction</title>
+  </head>
+  <body>
+    <script>
+      class Vehicle {
+        constructor(id, name, capacity) {
+          this.id = id;
+          this.name = name;
+          this.capacity = capacity;
+        }
+
+        //getter/setter will add later...
+        run() {
+          console.log("Vehicle is running...");
+        }
+      }
+
+      class Car extends Vehicle {
+        constructor(id, name, color, capacity, isSpareWeel) {
+          super(id, name, capacity);
+          this.color = color;
+          this.isSpareWeel = isSpareWeel;
+        }
+
+        //getter/setter will add later...
+        run() {
+          console.log("Car is running...");
+        }
+      }
+
+      class Taxi extends Vehicle {
+        constructor(id, name, capacity) {
+          super(id, name, capacity);
+        }
+
+        //getter/setter will add later...
+        run() {
+          console.log("Taxi is running...");
+        }
+      }
+
+      let vehicle = new Vehicle(1, "Xe co", 4);
+      console.log(vehicle);
+
+      let car = new Car(1, "Xe hoi", 8);
+      console.log(car);
+
+      let taxi = new Taxi(1, "Xe taxi", 7);
+      console.log(taxi);
+    </script>
+  </body>
+</html>

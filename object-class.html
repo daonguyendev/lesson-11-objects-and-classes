@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Object, class</title>
+  </head>
+  <body>
+    <script>
+      function Student(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+
+        this.learnCode = function (programmingLanguage) {
+          return programmingLanguage;
+        };
+
+        //getter/setter will declare later
+        this.getName = function () {
+          return this.name;
+        };
+
+        this.setName = function (name) {
+          this.name = name;
+        };
+      }
+
+      let teo = new Student(1, "Teo", 17);
+      console.log(teo);
+      console.log(
+        "I'm learning " + teo.learnCode("JavaScript") + "programing language!"
+      );
+
+      console.log("name1: " + teo.name); //"Teo" -> not recommend
+      teo.name = "Teo Nguyen";
+      console.log("name2: " + teo.name); //"Teo Nguyen" -> not recommend
+
+      console.log("name3: " + teo.getName()); //"Teo Nguyen" -> recommend
+      teo.setName("Nguyen Van Teo");
+      console.log("name4: " + teo.getName()); //"Nguyen Van Teo" -> recommend
+    </script>
+  </body>
+</html>

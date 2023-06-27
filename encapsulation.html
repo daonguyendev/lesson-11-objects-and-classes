@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Encapsulation</title>
+  </head>
+  <body>
+    <script>
+      class Student {
+        constructor(id, name, age) {
+          this.id = id;
+          this.name = name;
+          this.age = age;
+        }
+
+        get getId() {
+          return this.id;
+        }
+
+        set setId(id) {
+          this.id = id;
+        }
+
+        get getName() {
+          return this.name;
+        }
+
+        set setName(name) {
+          this.name = name;
+        }
+
+        get getAge() {
+          return this.age;
+        }
+
+        set setAge(age) {
+          this.age = age;
+        }
+      }
+
+      let teo = new Student(1, "Teo", 17);
+      console.log("name1: " + teo.name); //"Teo" -> violent encapsulation in oop -> not recommend
+      console.log("name2: " + teo.getName); //"Teo" -> ensure encapsulation in oop -> recommend
+
+      teo.age = 18;
+      console.log("age1: " + teo.getAge); //18 -> violent encapsulation in oop -> not recommend
+      teo.setAge = 19;
+      console.log("age2: " + teo.getAge); //19 -> ensure encapsulation in oop -> recommend
+    </script>
+  </body>
+</html>
